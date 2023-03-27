@@ -10,14 +10,14 @@ html {
 }
 
 nav ul {  
-  border-radius: 25px;
   box-sizing: border-box;
   background-color: #a395e9;
   list-style-type: none;
-  padding: 0;
+  border-radius: 25px;
   width: 40%;
   font-size: 0;
   margin: auto;
+  margin-top: 50px;
 }
 
 nav li {
@@ -30,14 +30,16 @@ nav li {
 nav a {
   display: inline-block;
   text-decoration: none;
-  width: 100%;
+  width: 90%;
+  height: 90%;
   padding: 0;
-  line-height: 2rem;
+  line-height: 1.5rem;
 }
 
 nav a:hover,
 nav a:focus {
-  background-color: blue;
+  border-radius: 25px;
+  background-color: #8a76d1;
   color: white;
 }
 
