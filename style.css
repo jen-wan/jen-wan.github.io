@@ -12,6 +12,7 @@ html {
 body {
   background-color: #191627;
   color: #BCBAC4;
+  width: 100%;
   /*light purple #a395e9 */
 }
 
@@ -49,34 +50,45 @@ nav a:focus {
   color: white;
 }
 
+main {
+  margin-bottom: 200px;
+  margin-top: 100px;
+  margin-left: 0px;
+}
+
+header {
+  display: inline-block;
+  text-align: right;
+  width: 55%;
+  padding-right: 50px;
+  vertical-align: 100%;
+}
+
 figure {
-  text-align: center;
-  margin-top: 50px;
+  display: inline-block;
+  text-align: left;
+  width: 45%;
+  vertical-align: 60%;
 }
 
 figure img {
-  height: 10%;
-  width: 10%;
-}
-
-#home header {
-  margin-bottom: 200px;
   text-align: center;
-  width: 100%;
+  width: 30%;
+  height: 30%;
 }
 
 header h1 {
   color: white;
-  margin: 10px;
+  margin-bottom: 10px;
 }
 
 header h5 {
-  margin: 10px;
+  margin-bottom: 10px;
 }
 
 header p {
   font-size: 0.8rem;
-  text-align: center;
+  text-align: right;
 }
 #about {
   margin-bottom: 200px;
