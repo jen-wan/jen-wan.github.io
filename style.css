@@ -10,6 +10,7 @@ html {
 }
 
 nav ul {  
+  border-radius: 25px;
   box-sizing: border-box;
   background-color: #a395e9;
   list-style-type: none;
