@@ -9,20 +9,26 @@ html {
   font-size: 28px;
 }
 
+body {
+  background-color: #191627;
+  color: #BCBAC4;
+  /*light purple #a395e9 */
+}
+
 nav ul {  
   box-sizing: border-box;
   background-color: #a395e9;
   list-style-type: none;
   border-radius: 25px;
-  width: 40%;
+  width: 30%;
   font-size: 0;
-  margin: auto;
-  margin-top: 50px;
+  text-align: center;
+  margin: 50px auto auto auto; 
 }
 
 nav li {
   display: inline-block;
-  font-size: 1rem;
+  font-size: 0.8rem;
   width: 20%;
   text-align: center;
 }
@@ -43,21 +49,49 @@ nav a:focus {
   color: white;
 }
 
-body {
-  background-color: #191627;
-  color: white;
-  /*light purple #a395e9 */
-}
-
-header {
-  width: 100%;
-}
-
 figure {
   text-align: center;
   margin-top: 50px;
 }
+
 figure img {
   height: 10%;
   width: 10%;
+}
+
+#home header {
+  margin-bottom: 200px;
+  text-align: center;
+  width: 100%;
+}
+
+header h1 {
+  color: white;
+  margin: 10px;
+}
+
+header h4 {
+  margin: 10px;
+}
+
+header p {
+  font-size: 0.8rem;
+  text-align: center;
+}
+#about {
+  margin-bottom: 200px;
+  text-align: center;
+}
+
+#skills{
+  margin-bottom: 200px;
+  text-align: center;
+}
+#projects{
+  margin-bottom: 200px;
+  text-align: center;
+}
+#contact{
+  margin-bottom: 200px;
+  text-align: center;
 }
