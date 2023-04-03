@@ -90,9 +90,15 @@ header p {
   font-size: 0.8rem;
   text-align: right;
 }
+
+.centerIt {
+  width: 50%;
+  margin: 0 auto;
+}
+
 #about {
   margin-bottom: 200px;
-  text-align: center;
+  text-align: left;
 }
 
 #skills{
