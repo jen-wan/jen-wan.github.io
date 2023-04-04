@@ -82,6 +82,7 @@ header h1 {
   margin-bottom: 10px;
 }
 
+
 header h5 {
   margin-bottom: 10px;
 }
@@ -112,4 +113,28 @@ header p {
 #contact{
   margin-bottom: 200px;
   text-align: center;
+}
+
+.type-me::after {
+  content: '|';
+  animation: cursor 0.7s infinite;
+}
+
+@keyframes cursor {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.type-me.typed::after {
+  content: '';
+  animation: none;
 }
