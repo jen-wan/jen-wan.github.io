@@ -30,8 +30,23 @@
         <p class="about-text-animation">Launch School is a self paced program.</p>
         <p class="about-text-animation">I am currently enrolled in JS 175 & JS 180, studying back-end development.</p>
       </main>
-
   </div>
+
+  <div class="chart centerIt"> 
+    <p>Launch School JavaScript Tracks:</p>
+    <pre class="mermaid">
+          flowchart TB
+          A(JS 170 Networking) --> B(JS 175 Networked Applications) 
+          B --> C(JS 180 Database Foundations)
+          B --> D(JS 202 HTML/CSS)
+    </pre>
+  </div>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true }, 
+      {fontSize: 14,});
+    
+  </script>
 </body>
 
 </html>
