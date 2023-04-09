@@ -103,9 +103,14 @@ header p {
 }
 
 #skills{
-  margin-bottom: 200px;
-  text-align: center;
+  margin: 100px 200px 200px 400px;
+  text-align: left;
 }
+
+#skills p {
+  margin: 3px 0;
+}
+
 #projects{
   margin-bottom: 200px;
   text-align: center;
