@@ -1,0 +1,190 @@
+@import url("whitespace-reset.css");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 13px;
+  font-family: 'Open Sans', Arial, sans-serif;
+  color: #444;
+}
+
+a[href] { /* targeting anchor links with href attribute*/
+  text-decoration: none;
+}
+
+a[href]:hover {
+  text-decoration: underline;
+}
+ 
+#menu {
+  position: fixed;
+  width: 100%; /* make it same width as viewport so we can center the elements in it*/
+  z-index: 1;
+  background-color: white;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.4); /*decrease opacity of border*/
+  border-top: 10px solid rgba(204, 204, 204, 0.2);
+}
+
+#menu ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 44px;
+  padding: 0;
+  margin: 0 104.369px;
+}
+
+#menu li {
+  display: inline-block;
+  margin: 0 25px;
+  list-style: none;
+}
+
+#menu a {
+  line-height: 44px;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: inherit;
+  outline: 0;
+}
+
+header {
+  position: relative; /*relative to body*/
+  top: 55px;
+  margin-bottom: 55px;
+  height: 428px;
+  text-align: center;
+  background: url(images/front.jpg) center no-repeat;
+}
+
+header h1, h2 { 
+  position: relative; /*h1 and h2 are relative to header*/
+  top: 130px;
+  font-weight: normal;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .4), 0 0 30px rgba(0, 0, 0, .075);
+  color: white;
+}
+
+header h1 {
+  font-size: 72px;
+}
+
+header h2 {
+  font-size: 31px;
+  text-transform: uppercase;
+}
+
+header .logo {
+  position: relative;
+  top: 130px;
+  width: 80px;
+  height: 80px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .4), 0 0 30px rgba(0, 0, 0, .075);
+}
+
+article {
+  scroll-margin-top: 54px;
+  margin: 0 30px;
+  padding: 0 0 60px;
+  border-top: 1px solid #efefef; /* prevents margin collapse too*/
+}
+
+article h1 {
+  font-size: 48px;
+  margin: 60px 0 30px;
+  font-weight: lighter;
+}
+
+article p {
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+#tickets {
+  text-align: center;
+}
+
+a.button {
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 16px;
+  font-family: 'Open Sans', Arial, sans-serif;
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+}
+
+#speakers {
+  text-align: center;
+}
+
+#speakers ul {
+  margin: 0 auto;
+  display: grid;
+  width: 870px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 15px;
+}
+
+#speakers li {
+  border: 1px solid rgba(204, 204, 204, 0.4);
+  padding-bottom: 40px;
+}
+
+#speakers h4 {
+  color: green;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+#schedule h1 {
+  text-align: center;
+}
+
+#schedule ul {
+  margin: 0 auto;
+  display: grid;
+  width: 952px;
+  grid-template-columns: 9% 76% 15%;
+  grid-template-rows: 
+    53px 53px repeat(3, 130px) 
+    53px repeat(3, 130px) 
+    53px repeat(3, 130px)
+    53px repeat(3, 130px) 53px;
+}
+
+#schedule li {
+  border-bottom: 1px solid rgba(204, 204, 204, 0.4);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+#schedule img {
+  width: 100%;
+}
+
+#schedule li:nth-child(-n+3) { /* selects first row of grid*/
+  border-top: 1px solid rgba(204, 204, 204, 0.4);
+}
+
+#schedule li:nth-child(3n + 1), li:nth-child(3n + 2) { /*selects 1st and 2nd columns of grid*/
+  font-size: 24px;
+}
+
+#schedule dl {
+  padding: 10px 0;
+}
+
+#schedule a {
+  color: green;
+  font-weight: bold;
+  font-size: 18px;
+}
