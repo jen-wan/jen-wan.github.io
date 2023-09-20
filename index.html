@@ -10,17 +10,17 @@
 </head>
 
 <body>
-  <nav id="home">
+  <nav id="menu">
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="skills.html">Skills</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <main id="main-content">
+  <section class="header-wrapper">
     <header>
         <h1 class="text-description type-me"></h1>
         <h5>Aspiring Software Engineer</h5>
@@ -29,7 +29,33 @@
     </header><figure class="profile_pic">
       <img src="public/images/profile_pic.png" alt="profile pic">
     </figure>
-  </main>
+  </section>
+
+  <section id="about">
+    <h1 class="about-animation">About Me</h1>
+    <p class="about-text-animation">Launch School is a self paced program.</p>
+    <p class="about-text-animation">I am currently finishing up JS 202, a course about HTML & CSS.</p>
+  </section>
+
+  <section id="projects">
+    <h1>Projects</h1>
+    <p>This is the current assignment I'm working on, a website for a JS Conference.</p>
+    <p class="projects-img"><a href="JSConf BR 2014/index.html"><img src="images/jsconference.png"></a></p>
+  </section>
+
+  <section id="skills">
+    <h1>Skills</h1>
+    <p><strong>Languages &amp; Frameworks</strong>: JavaScript, Node.JS, Express.jS, HTML/CSS</p>
+    <p><strong>Technologies</strong>: PostgreSQL, SQL, AWS(ECS), Linux, HTTP, OOP, Git/Github</p>
+    <p><strong>In progress</strong>: TypeScript, Golang, Heroku, Docker, NoSQL, and more</p>
+  </section>
+
+
+  <section id="contact">
+    <p>Contact me</p>
+  </section>
+
+  <nav></nav>
 </body>
 
 </html>
