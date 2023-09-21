@@ -8,16 +8,49 @@ body {
   font-size: 13px;
   font-family: 'Open Sans', Arial, sans-serif;
   color: #444;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
 }
 
 a[href] { /* targeting anchor links with href attribute*/
   text-decoration: none;
+  color: green;
+  font-weight: bold;
 }
 
 a[href]:hover {
   text-decoration: underline;
 }
- 
+
+article {
+  scroll-margin-top: 54px;
+  margin: 0 30px;
+  padding: 0 0 60px;
+  border-top: 1px solid #efefef; /* prevents margin collapse too*/
+}
+
+article p, footer p {
+  margin: 0 auto 17px;
+  max-width: 960px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
+}
+
+article h2 {
+  margin: 1.236em 0 .618em;
+  font-size: 48px;
+  text-align: center;
+  font-weight: lighter;
+}
+
+article h3 {
+  margin: 30px 0 4px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
 #menu {
   position: fixed;
   width: 100%; /* make it same width as viewport so we can center the elements in it*/
@@ -28,12 +61,10 @@ a[href]:hover {
 }
 
 #menu ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  height: 44px;
+  max-width: 960px;
   padding: 0;
-  margin: 0 104.369px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 #menu li {
@@ -48,6 +79,7 @@ a[href]:hover {
   font-size: 13px;
   color: inherit;
   outline: 0;
+  font-weight: normal;
 }
 
 header {
@@ -59,8 +91,8 @@ header {
   background: url(images/front.jpg) center no-repeat;
 }
 
-header h1, h2 { 
-  position: relative; /*h1 and h2 are relative to header*/
+header h1, header h2 { 
+  position: relative; /*h2 and h3 are relative to header*/
   top: 130px;
   font-weight: normal;
   text-align: center;
@@ -83,26 +115,6 @@ header .logo {
   width: 80px;
   height: 80px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, .4), 0 0 30px rgba(0, 0, 0, .075);
-}
-
-article {
-  scroll-margin-top: 54px;
-  margin: 0 30px;
-  padding: 0 0 60px;
-  border-top: 1px solid #efefef; /* prevents margin collapse too*/
-}
-
-article h1 {
-  font-size: 48px;
-  margin: 60px 0 30px;
-  font-weight: lighter;
-}
-
-article p {
-  font-size: 16px;
-  line-height: 25px;
-  font-weight: 300;
-  margin-bottom: 15px;
 }
 
 #tickets {
@@ -133,8 +145,10 @@ a.button {
 }
 
 #speakers li {
+  display: block;
   border: 1px solid rgba(204, 204, 204, 0.4);
   padding-bottom: 40px;
+  position: relative;
 }
 
 #speakers h4 {
@@ -144,7 +158,32 @@ a.button {
   margin-top: 30px;
 }
 
-#schedule h1 {
+.hover-text p {
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.hover-text {
+  opacity: 0;
+  position: absolute; /*positioned within li(which itself has relative positionining*/
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  color: #FFF;
+  background: rgba(0, 0, 0, 0.9);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#speakers li:hover .hover-text, 
+#speakers li:target .hover-text{
+  opacity: 1;
+}
+
+#schedule h2 {
   text-align: center;
 }
 
@@ -168,7 +207,11 @@ a.button {
 }
 
 #schedule img {
-  width: 100%;
+  width: 130px;
+}
+
+#schedule a {
+  font-size: 18px;
 }
 
 #schedule li:nth-child(-n+3) { /* selects first row of grid*/
@@ -183,8 +226,146 @@ a.button {
   padding: 10px 0;
 }
 
-#schedule a {
-  color: green;
-  font-weight: bold;
+#schedule h3 {
+  margin: 0 10px 0 0;
+  padding: 0;
+  display: inline-block;
+  font-weight: normal;
+  text-align: left;
+}
+
+#schedule p {
+  display: block;
+  margin: 8px 0;
   font-size: 18px;
+}
+
+.schedule-tag {
+  display: inline-block;
+  padding: 1px 4px;
+  font-size: 7px;
+  background: #EEE;
+  margin-right: 4px;
+  border: 1px solid #AAA;
+}
+
+#sponsors .container {
+  width: 960px;
+  margin: 0 auto 17px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
+}
+
+#sponsors h3 {
+  font-size: 18px;
+}
+
+.gold-sponsor, .silver-sponsor, .support-sponsor {
+  margin-right: 40px;
+}
+
+#sponsors .silver-sponsor img {
+  width: 240px;
+}
+
+#sponsors .support-sponsor img {
+  width: 180px;
+}
+
+#footer {
+  margin: 0;
+  height: 340px;
+  color: #FFF;
+  background-size: cover !important; /*highest level of specificity*/
+  background: url(images/people.jpg) no-repeat center 23%;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .4), 0 0 30px rgba(0, 0, 0, .075);
+}
+
+#footer h2 {
+  margin: .618em 0 .618em;
+}
+
+#footer h3 {
+  max-width: 960px;
+  margin: 0 auto;
+  font-size: 31px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.wrapper {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+}
+
+@media (max-width: 654px) {
+  #menu {
+    display: none;
+  }
+
+  header { top: 0; margin-bottom: 0; height: 300px; }
+  header h1, header h2, header .logo { top: 90px; }
+  header h1 { font-size: 40px; }
+  header h2 { font-size: 20px; }
+
+  #speakers {
+    margin: 0;
+  }
+
+  #speakers ul {
+    margin: 0 auto;
+    width: 560px;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 15px;
+  }
+
+  #schedule {
+    width: 100%;
+  }
+
+  #schedule ul {
+    position: relative;
+    display: block;
+    border-top: 1px solid #EFEFEF;
+  }
+
+  #schedule li {
+    display: block;
+    border: none;
+  }
+
+  .schedule-hour {
+    padding: 20px !important;
+    text-align: right;
+  }
+
+  #schedule.schedule-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #sponsors div.container {
+    margin: 0 auto;
+    max-width: 400px;
+    text-align: left;
+  }
+
+  #sponsers {
+    margin: 0 10px;
+  }
+
+  #footer h2 {
+    font-size: 35px;
+  }
+}
+
+ @media (max-width: 584px){
+  #speakers ul {
+      margin: 0 auto;
+      width: 280px;
+      grid-template-columns: 1fr;
+      gap: 10px 15px;
+    }
 }
