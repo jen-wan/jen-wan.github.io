@@ -179,11 +179,6 @@ header p {
   justify-content: center;
 }
 
-#projects a:hover .hover-text {
+#projects div.container:hover .hover-text {
   opacity: 1;
-}
-
-#div.hover-text {
-  display: flex;
-  align-items: center;
 }
