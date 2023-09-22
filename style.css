@@ -153,3 +153,38 @@ header p {
 .text-animation {
   animation: slide-in-left 0.9s ease-in;
 }
+
+
+#projects a {
+  display: block;
+  position: relative;
+}
+
+.hover-text {
+  width: 700px;
+  opacity: 0;
+  position: absolute;
+  /*positioned within projects(which itself has relative positionining*/
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  color: #FFF;
+  background: rgba(0, 0, 0, 0.9);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#projects a:hover .hover-text {
+  opacity: 1;
+}
+
+#div.hover-text {
+  display: flex;
+  align-items: center;
+}
