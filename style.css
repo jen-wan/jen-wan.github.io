@@ -159,7 +159,15 @@ header p {
   position: relative;
 }
 
+.hover-text a {
+  flex: 1;
+}
+
 .hover-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   width: 700px;
   opacity: 0;
   position: absolute;
@@ -174,9 +182,6 @@ header p {
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 #projects div.container:hover .hover-text {
