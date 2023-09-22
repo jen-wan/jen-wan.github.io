@@ -155,8 +155,7 @@ header p {
 }
 
 
-#projects a {
-  display: block;
+#projects div.container {
   position: relative;
 }
 
@@ -164,7 +163,7 @@ header p {
   width: 700px;
   opacity: 0;
   position: absolute;
-  /*positioned within projects(which itself has relative positionining*/
+  /*positioned within div container(which itself has relative positionining*/
   top: 0;
   bottom: 0;
   left: 0;
