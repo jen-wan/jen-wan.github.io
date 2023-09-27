@@ -5,27 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-label {
-  cursor: pointer;
-}
-#menu-toggle {
-  display: none; /* hide the checkbox */
-}
-#menu {
-  display: none;
-}
-#menu-toggle:checked + #menu {
-  display: block;
-}
+    .modal label, .modal .input {
+      display: inline-block;
+    }
   </style>
 </head>
 <body>
-<label for="menu-toggle">Click me to toggle menu</label>
-<input type="checkbox" id="menu-toggle" />
-<ul id="menu">
-  <li><a href="#">First link</a></li>
-  <li><a href="#">Second link</a></li>
-  <li><a href="#">Third link</a></li>
-</ul>
+              <div class="modal">
+                <label for="title" class="modal-title">Title</label>
+                <input type="text" id="title">
+              
+                <label for="due-date" class="modal-due-date">Due Date</label>
+                <select name="day" id="day" size="1" multiple>
+                  <option value="16">16</option>
+                </select> /
+                <select name="month" id="month" size="1" multiple>
+                  <option value="01">Month</option>
+                </select> /
+                <select name="year" id="year" size="1" multiple>
+                  <option value="1997">Year</option>
+                </select>
+              
+                <label class="modal-description">
+                  Description
+                  <textarea name="description" rows="9"></textarea>
+                </label>
+              </div>
 </body>
 </html>
